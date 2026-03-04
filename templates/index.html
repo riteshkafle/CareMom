@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MamaCare — Your Pregnancy Companion</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #f5faf7;
+      --card: #fcfefd;
+      --border: #d4e4db;
+      --foreground: #1a2e24;
+      --muted: #5e7368;
+      --muted-bg: #e8f0ec;
+      --primary: #2a8a5e;
+      --primary-dark: #1f7a50;
+      --accent-bg: #e0f2e9;
+      --radius: 0.75rem;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--foreground);
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-icon {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--accent-bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.4rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h1 span { color: var(--primary); }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 400px;
+    }
+
+    .btn-start {
+      width: 100%;
+      max-width: 320px;
+      padding: 14px 0;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-start:hover { background: var(--primary-dark); }
+
+    .features {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .feature-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .feature-text { font-size: 0.88rem; }
+    .feature-text strong { color: var(--foreground); }
+    .feature-text span { color: var(--muted); }
+
+    .code-card {
+      width: 100%;
+      background: var(--muted-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .code-card h3 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .code-block {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-icon">🌸</div>
+    <h1>Mama<span>Care</span></h1>
+    <p class="subtitle">Your gentle AI pregnancy companion. Talk naturally about symptoms, nutrition, wellness, or how you're feeling today.</p>
+
+    <button class="btn-start" onclick="openChat()">🎙️ Start Talking</button>
+
+    <div class="features">
+      <div class="feature-card">
+        <span class="feature-icon">💬</span>
+        <div class="feature-text"><strong>Natural voice chat</strong> <span>— Just speak, she listens</span></div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🩺</span>
+        <div class="feature-text"><strong>Pregnancy guidance</strong> <span>— Symptoms, milestones, nutrition</span></div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🧘</span>
+        <div class="feature-text"><strong>Wellness support</strong> <span>— Relaxation, sleep tips, exercises</span></div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">💕</span>
+        <div class="feature-text"><strong>Emotional support</strong> <span>— A caring friend, always here</span></div>
+      </div>
+    </div>
+
+    <div class="code-card">
+      <h3>React / mobile usage</h3>
+      <div class="code-block">window.open('/conversation', 'mamacare', 'width=420,height=680')</div>
+    </div>
+  </div>
+
+  <script>
+    function openChat() {
+      const w = 420, h = 680;
+      const left = (screen.width - w) / 2;
+      const top = (screen.height - h) / 2;
+      window.open('/conversation', 'mamacare',
+        `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=no`);
+    }
+  </script>
+</body>
+</html>
