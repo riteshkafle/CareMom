@@ -1,6 +1,6 @@
 import urllib.request, urllib.error, json
 data = json.dumps({'user_id': 'demo-user-1', 'message': 'hello'}).encode()
-req = urllib.request.Request('https://f4bc-138-238-254-103.ngrok-free.app/chat', data=data, headers={
+req = urllib.request.Request('https://f4bc-138-238-254-102.ngrok-free.app/chat', data=data, headers={
     'Content-Type': 'application/json',
     'ngrok-skip-browser-warning': 'true'
 })

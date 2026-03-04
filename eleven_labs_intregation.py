@@ -52,7 +52,6 @@ def conversation():
     return render_template("conversation.html")
 
 
-# ─── Medicine Scanner ──────────────────────────────────────────
 
 NVIDIA_INVOKE_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 NVIDIA_API_KEY = os.getenv("nvidia_api_key")

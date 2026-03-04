@@ -14,10 +14,10 @@ function toISOTimestamp(hoursFromNow: number): string {
 
 export const demoUser: User = {
   id: "demo-user-1",
-  name: "Aaliyah Johnson",
+  name: "Washington Issac",
   email: "demo@nurturenest.app",
   dueDate: "2026-07-15",
-  state: "Georgia",
+  state: "D.C",
   riskFactors: ["Hypertension history", "First pregnancy", "BMI above 30"],
   createdAt: "2026-01-08T09:00:00.000Z",
 }
@@ -50,13 +50,13 @@ export function getDemoSymptomHistory(): SymptomLog[] {
 export const demoAppointments: Appointment[] = [
   {
     id: "apt-1",
-    title: "Prenatal Checkup",
-    doctor: "Dr. Sarah Chen",
+    title: "Normal Checkup",
+    doctor: "Dr. Heng Lee",
     date: toISODate(3),
-    time: "10:00 AM",
+    time: "1:00 PM",
     type: "checkup",
     status: "upcoming",
-    notes: "Bring blood pressure readings and symptom notes.",
+    notes: "Check pressure and measure every essentials body temp.",
   },
   {
     id: "apt-2",
